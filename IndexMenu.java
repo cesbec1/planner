@@ -1,10 +1,11 @@
-package Index;
-
 import java.util.Scanner;
 
 public class IndexMenu {
     modifyIndex m = new modifyIndex();
-
+    public static void main(String[] args) {
+        IndexMenu cool = new IndexMenu();
+        cool.menu();  
+    }
 
     public void menu()
     {
@@ -22,6 +23,7 @@ public class IndexMenu {
         System.out.println("Add Some Topic - enter A");
         System.out.println("Add Delete Topic - enter D");
         System.out.println("Select some Topic - enter M\n");
+        System.out.println("To go back to the main menu, press any key");
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         sc.nextLine();
@@ -39,9 +41,12 @@ public class IndexMenu {
             case "M":
             case "m":
             m.selectTopic();
+            default:
+            System.out.println("Exiting out....");
+            val = false;
+            break;
 
         }
-
     }
 }
 }
