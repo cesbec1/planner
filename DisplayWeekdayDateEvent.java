@@ -35,7 +35,7 @@ public class DisplayWeekdayDateEvent implements Display{
 		int leapYearCode = 0;
 		int dateNumber = someEntry.date;
 		
-		int dayOfTheWeek = (yearCode + monthCode + centuryCode + dateNumber - leapYearCode)%7;
+		int dayOfTheWeek = (yearCode + monthCode + centuryCode + dateNumber - leapYearCode - 1)%7;
 		// parse dayOfWeek to String form
 		String weekdayString = "";
 		
